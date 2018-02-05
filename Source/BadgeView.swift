@@ -104,7 +104,8 @@ open class BadgeView: UIView {
 
     open var badgeValue: Int = 0 {
         didSet {
-            guard badgeValue < 0  else {
+            guard badgeValue > 0  else {
+                hide()
                 return
             }
 
@@ -116,6 +117,7 @@ open class BadgeView: UIView {
     open var badgeImage: UIImage? = nil {
         didSet {
             guard badgeImage != nil else {
+                hide()
                 return
             }
 
@@ -160,10 +162,10 @@ open class BadgeView: UIView {
     // MARK:
 
     open func increment() {
-        badgeValue += 1
+        badgeValue = max(0, badgeValue + 1)
     }
 
     open func decrement() {
-        badgeValue -= 1
+        badgeValue = max(0, badgeValue - 1)
     }
 }
