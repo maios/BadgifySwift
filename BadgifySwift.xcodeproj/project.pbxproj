@@ -10,6 +10,8 @@
 		3A4337572028C82D00D55799 /* BadgifySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A43374D2028C82D00D55799 /* BadgifySwift.framework */; };
 		3A43375C2028C82D00D55799 /* BadgifySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43375B2028C82D00D55799 /* BadgifySwiftTests.swift */; };
 		3A43375E2028C82D00D55799 /* BadgifySwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4337502028C82D00D55799 /* BadgifySwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A4337692028CA1400D55799 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4337682028CA1400D55799 /* BadgeView.swift */; };
+		3A43376B2028CE8D00D55799 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43376A2028CE8D00D55799 /* AttributedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		3A4337562028C82D00D55799 /* BadgifySwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadgifySwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A43375B2028C82D00D55799 /* BadgifySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgifySwiftTests.swift; sourceTree = "<group>"; };
 		3A43375D2028C82D00D55799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4337682028CA1400D55799 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		3A43376A2028CE8D00D55799 /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		3A4337432028C82D00D55799 = {
 			isa = PBXGroup;
 			children = (
+				3A4337672028C9A900D55799 /* Source */,
 				3A43374F2028C82D00D55799 /* BadgifySwift */,
 				3A43375A2028C82D00D55799 /* BadgifySwiftTests */,
 				3A43374E2028C82D00D55799 /* Products */,
@@ -84,6 +89,15 @@
 				3A43375D2028C82D00D55799 /* Info.plist */,
 			);
 			path = BadgifySwiftTests;
+			sourceTree = "<group>";
+		};
+		3A4337672028C9A900D55799 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A4337682028CA1400D55799 /* BadgeView.swift */,
+				3A43376A2028CE8D00D55799 /* AttributedString.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					3A43374C2028C82D00D55799 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					3A4337552028C82D00D55799 = {
@@ -196,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A43376B2028CE8D00D55799 /* AttributedString.swift in Sources */,
+				3A4337692028CA1400D55799 /* BadgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +351,7 @@
 		3A4337622028C82D00D55799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maimaios.BadgifySwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +374,7 @@
 		3A4337632028C82D00D55799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +396,7 @@
 		3A4337652028C82D00D55799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CRLRD53RWG;
 				INFOPLIST_FILE = BadgifySwiftTests/Info.plist;
@@ -390,6 +411,7 @@
 		3A4337662028C82D00D55799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CRLRD53RWG;
 				INFOPLIST_FILE = BadgifySwiftTests/Info.plist;
