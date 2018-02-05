@@ -22,18 +22,29 @@ open class BadgeView: UIView {
         }
     }
 
+    /**
+     Minimum size of the badge. Default is (20, 20)
+     */
     open var minBadgeSize: CGSize = CGSize(width: 20, height: 20) {
         didSet {
             adjustLayout()
         }
     }
 
+    /**
+     Horizontal offset of the badge from the
+     top right corner of container view.
+     */
     open var xOffset: CGFloat = 0.0 {
         didSet {
             adjustLayout()
         }
     }
 
+    /**
+     Vertical offset of the badge from the
+     top right corner of container view.
+     */
     open var yOffset: CGFloat = 0.0 {
         didSet {
             adjustLayout()
@@ -100,8 +111,14 @@ open class BadgeView: UIView {
         badgeLabel.center = CGPoint(x: width / 2.0, y: height / 2.0)
     }
 
-    // MARK:
+    // MARK: Badge value / image
 
+    /**
+     The number value of the badge.
+     - Note: If this value is greater than 0, the `badgeImage`
+        will be reset to `nil`. The badge is visible if either
+        `badgeValue` or `badgeImage` has valid value.
+     */
     open var badgeValue: Int = 0 {
         didSet {
             guard badgeValue > 0  else {
@@ -114,6 +131,12 @@ open class BadgeView: UIView {
         }
     }
 
+    /**
+     The image value of the badge.
+     - Note: If this value is set, the `badgeCount` will
+        be reset to 0. The badge is visible if either
+        `badgeCount` or `badgeImage` has valid value.
+     */
     open var badgeImage: UIImage? = nil {
         didSet {
             guard badgeImage != nil else {
@@ -159,12 +182,18 @@ open class BadgeView: UIView {
         isHidden = true
     }
 
-    // MARK:
+    // MARK: Increment/Decrement
 
+    /**
+     Increase the current `badgeValue` by 1.
+     */
     open func increment() {
         badgeValue = max(0, badgeValue + 1)
     }
 
+    /**
+     Decrease the current `badgeValue` by 1.
+     */
     open func decrement() {
         badgeValue = max(0, badgeValue - 1)
     }
