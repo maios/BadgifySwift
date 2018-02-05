@@ -188,7 +188,7 @@ open class BadgeView: UIView {
      Increase the current `badgeValue` by 1.
      */
     open func increment() {
-        badgeValue = max(0, badgeValue + 1)
+        badgeValue = max(1, badgeValue + 1)
     }
 
     /**
