@@ -23,3 +23,20 @@ target '<Your Target Name>' do
     pod 'BadgifySwift'
 end
 ```
+## Usage
+```
+import BadgifySwift
+
+let badgeView = BadgeView()
+myView.addSubview(badgeView)
+
+// Set badge value
+badgeView.badgeValue = 10
+
+// Set badge image
+badgeView.badgeImage = myImage
+
+// Increment / Decrement
+badgeView.increment()
+badgeView.decrement()
+```
