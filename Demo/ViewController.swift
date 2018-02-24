@@ -9,9 +9,9 @@
 import UIKit
 import BadgifySwift
 
-fileprivate let swiftColor = UIColor(red: 223/255, green: 92/255, blue: 67/255, alpha: 1)
-
 class ViewController: UIViewController {
+    
+    private static let swiftColor = UIColor(red: 223/255, green: 92/255, blue: 67/255, alpha: 1)
     
     @IBOutlet private weak var badgedView: UIImageView!
     
@@ -41,11 +41,11 @@ class ViewController: UIViewController {
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
             case 0:
-                self.badgeView.badgeValue = 1
-                self.stepper.isHidden = false
+                badgeView.badgeValue = 1
+                stepper.isHidden = false
             case 1:
-                self.badgeView.badgeImage = #imageLiteral(resourceName: "cc_logo")
-                self.stepper.isHidden = true
+                badgeView.badgeImage = #imageLiteral(resourceName: "cc_logo")
+                stepper.isHidden = true
             default: break
         }
     }
