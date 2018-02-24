@@ -22,10 +22,6 @@ class ViewController: UIViewController {
         view.badgeValue = 1
         view.backgroundColor = .white
         view.textColor = swiftColor
-        view.badgeFont = .systemFont(ofSize: 14)
-        view.minBadgeSize = CGSize(width: 25, height: 25)
-        view.xOffset = 5
-        view.yOffset = 5
         return view
     }()
     
@@ -41,7 +37,7 @@ class ViewController: UIViewController {
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
             case 0:
-                badgeView.badgeValue = 1
+                badgeView.badgeValue = Int(stepper.value)
                 stepper.isHidden = false
             case 1:
                 badgeView.badgeImage = #imageLiteral(resourceName: "cc_logo")

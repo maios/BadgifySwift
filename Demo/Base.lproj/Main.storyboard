@@ -36,7 +36,7 @@
                                     <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="zPZ-jv-fkx"/>
                                 </connections>
                             </segmentedControl>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9LH-PW-liU">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9LH-PW-liU">
                                 <rect key="frame" x="140" y="398" width="94" height="29"/>
                                 <color key="tintColor" red="0.87450980392156863" green="0.36078431372549019" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
